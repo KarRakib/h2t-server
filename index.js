@@ -88,7 +88,7 @@ async function run() {
         return rest
       })
 
-      const result = await addht2_productsCollection.insertOne({ email, modified, data, order, date, status, totalPrice })
+      const result = await addProdCollection.insertOne({ email, modified, data, order, date, status, totalPrice })
       res.send(result)
     })
     app.get('/my-orders/:id', async (req, res) => {
